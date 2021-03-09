@@ -1,5 +1,7 @@
 import { Component } from "react";
 import shortid from "shortid";
+import s from "./Form.module.css";
+console.log(s);
 
 class Form extends Component {
   loginInputId = shortid.generate();
@@ -10,9 +12,9 @@ class Form extends Component {
     number: "",
   };
   handleChange = (event) => {
-    console.log(event.currentTarget);
-    console.log(event.currentTarget.name);
-    console.log(event.currentTarget.value);
+    // console.log(event.currentTarget);
+    // console.log(event.currentTarget.name);
+    // console.log(event.currentTarget.value);
 
     this.setState({
       [event.currentTarget.name]: event.currentTarget.value,
@@ -31,8 +33,8 @@ class Form extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <label htmlFor={this.loginInputId}>
-          Имя
           <input
+            placeholder="Number"
             name="name"
             type="text"
             value={this.state.name}
@@ -43,8 +45,9 @@ class Form extends Component {
 
         <label htmlFor={this.numberInputId}>
           <br />
-          Номер
+
           <input
+            placeholder="Name"
             name="number"
             type="text"
             value={this.state.number}
