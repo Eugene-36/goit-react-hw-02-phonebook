@@ -34,7 +34,7 @@ class Form extends Component {
       <form onSubmit={this.handleSubmit}>
         <label htmlFor={this.loginInputId}>
           <input
-            placeholder="Number"
+            placeholder="Name"
             name="name"
             type="text"
             value={this.state.name}
@@ -47,7 +47,7 @@ class Form extends Component {
           <br />
 
           <input
-            placeholder="Name"
+            placeholder="Number"
             name="number"
             type="text"
             value={this.state.number}
