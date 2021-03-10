@@ -41,9 +41,21 @@ class App extends Component {
       ),
     }));
   };
+  alert = () => {
+    const search = this.state.contacts.flatMap((el) => el.name);
+    console.log(search);
+    const res = search.filter((item, idx) => search.indexOf(item) === idx);
+    alert(res);
+  };
   render() {
     const { filter } = this.state;
     const visibleContact = this.getVisibleContac();
+    // const search = this.state.contacts.flatMap((el) => el.name);
+    // console.log(search);
+    // const res = search.filter((item, idx) => search.indexOf(item) === idx);
+    // // //const message = "is already in contacts";
+    // // alert(res, "is already in contacts");
+
     return (
       <div className="App">
         <div>
